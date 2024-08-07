@@ -5,19 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali Zubair Aslam - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation bar styles */
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #555;
+            border-radius: 4px;
+        }
+
+        /* Header styles */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid #fff;
+        }
+
+        header h1 {
+            margin: 0;
+            padding-top: 180px; /* Adjusted to avoid overlapping with the image */
+        }
+
+        header p {
+            margin: 5px 0;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Section and animation styles */
+        section {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <img src="your-photo.jpg" alt="Ali Zubair Aslam">
         <h1>Ali Zubair Aslam</h1>
         <p>Sheffield, UK | <a href="mailto:ali293.ma@gmail.com">ali293.ma@gmail.com</a> | +447938975722 | <a href="https://www.linkedin.com/in/ali-zubair-b2b132195">LinkedIn</a></p>
     </header>
 
-    <section id="profile">
+    <nav>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work-experience">Work Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#additional-experience">Additional Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="profile" class="fade-in">
         <h2>Profile</h2>
         <p>A highly motivated professional with an undergraduate degree in Electrical Engineering, currently pursuing a postgraduate degree in Electrical and Electronics Engineering. I excel in designing electrical drawings and PCBs, embedded systems, programming, AutoCAD and PLCs. With strong technical skills in simulation software and research capabilities for solving industrial problems, I have applied my expertise in multiple projects. I seek an engineering role in electrical design, electronics analysis, troubleshooting, and implementation to enhance my skills and contribute to real-world industry projects.</p>
     </section>
 
-    <section id="education">
+    <section id="education" class="fade-in">
         <h2>Education</h2>
         <h3>Sheffield Hallam University, MSc in Electrical and Electronics Engineering</h3>
         <p>Jan 2024 – Present</p>
@@ -33,7 +165,7 @@
         </ul>
     </section>
 
-    <section id="work-experience">
+    <section id="work-experience" class="fade-in">
         <h2>Work Experience</h2>
         <h3>Electrical Engineer, Emerging Energy Contracting Est. – Manama, Bahrain (Remote)</h3>
         <p>Mar 2024 – Present</p>
@@ -63,7 +195,7 @@
         </ul>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="fade-in">
         <h2>Projects</h2>
         <h3>DC-DC Boost Controller</h3>
         <ul>
@@ -82,29 +214,8 @@
         </ul>
     </section>
 
-    <section id="additional-experience">
+    <section id="additional-experience" class="fade-in">
         <h2>Additional Experience And Awards</h2>
         <ul>
             <li>AutoCAD Certification (2023-2023): Took a course to improve AutoCAD drawing skills.</li>
-            <li>Third Prize, Senior Design Project: Awarded 3rd prize for increasing the efficiency of the solar panel and increasing the power by two times using a boost controller.</li>
-        </ul>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming Languages: C++, 8085 and 8086 Machine learning, MATLAB, Arduino</li>
-            <li>Software: MATLAB, Simulink, EAGLE (PCB), AutoCAD, PVsyst, Automation Studio, Siemens TIA portal</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out via email at <a href="mailto:ali293.ma@gmail.com">ali293.ma@gmail.com</a> or call me at +447938975722.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Ali Zubair Aslam. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+            <li>Third Prize, Senior Design Project: Awarded 3rd prize for increasing the efficiency of the solar panel and increasing the
