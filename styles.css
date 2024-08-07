@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    display: flex;
 }
 
 header {
@@ -11,7 +12,9 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
-    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 header .profile-photo {
@@ -36,19 +39,25 @@ header a {
 
 nav {
     background: #f4f4f4;
-    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    width: 250px;
     position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 1000;
+    bottom: 0;
+    overflow-y: auto;
+    padding-top: 20px;
+    box-sizing: border-box;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
 }
 
-nav ul
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    color: #
