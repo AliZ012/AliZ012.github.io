@@ -16,7 +16,8 @@ header {
     padding: 20px;
     text-align: center;
     flex-shrink: 0;
-    width: 100%;
+    width: calc(100% - 250px); /* Adjusted for the width of the sidebar */
+    margin-left: 250px; /* Space for the sidebar */
     box-sizing: border-box;
 }
 
@@ -37,23 +38,4 @@ header p {
 
 header a {
     color: #fff;
-    text-decoration: none;
-}
-
-/* Navigation Styles */
-nav {
-    background: #f4f4f4;
-    border-right: 1px solid #ddd;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    overflow-y: auto;
-    padding-top: 20px;
-    box-sizing: border-box;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-   
+    text-decoration: none
